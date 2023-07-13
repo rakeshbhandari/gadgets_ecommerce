@@ -31,8 +31,7 @@ class HomePage extends StatelessWidget {
                 child: Stack(children: <Widget>[
                   const Text(
                     'Popular now',
-                    style:
-                        TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
                   ),
                   Container(
                     margin: const EdgeInsets.only(left: 0, top: 49),
@@ -95,11 +94,11 @@ class HomePage extends StatelessWidget {
                         width: 300,
                         child: Align(
                           alignment: Alignment.topCenter,
-                          child: Image.asset('assets/chair.png',
-                              fit: BoxFit.cover
-                              // height: 400,
-                              // width: 300,
-                              ),
+                          child:
+                              Image.asset('assets/chair.png', fit: BoxFit.cover
+                                  // height: 400,
+                                  // width: 300,
+                                  ),
                         ),
                       )),
                 ]),
@@ -109,8 +108,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   const Text(
                     'Categories',
-                    style:
-                        TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
                   ),
                   GestureDetector(
                       onTap: () {},
@@ -146,8 +144,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   const Text(
                     'New Arrivals',
-                    style:
-                        TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
                   ),
                   GestureDetector(
                       onTap: () {},
