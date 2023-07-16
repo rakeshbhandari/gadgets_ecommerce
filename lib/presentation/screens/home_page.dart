@@ -31,7 +31,9 @@ class HomePage extends StatelessWidget {
                 child: Stack(children: <Widget>[
                   const Text(
                     'Popular now',
-                    style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold,
+                    
+                    ),
                   ),
                   Container(
                     margin: const EdgeInsets.only(left: 0, top: 49),
@@ -86,7 +88,9 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Positioned(
+                    
                       right: 8,
+                      
                       top: 0,
                       child: SizedBox(
                         // color: Colors.red,
