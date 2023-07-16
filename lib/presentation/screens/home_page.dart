@@ -1,5 +1,6 @@
 import 'package:ecommerce_gadgets/presentation/widgets/category_maker.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -31,8 +32,9 @@ class HomePage extends StatelessWidget {
                 child: Stack(children: <Widget>[
                   const Text(
                     'Popular now',
-                    style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold,
-                    
+                    style: TextStyle(
+                      fontSize: 26,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                   Container(
@@ -88,9 +90,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    
                       right: 8,
-                      
                       top: 0,
                       child: SizedBox(
                         // color: Colors.red,
@@ -115,7 +115,9 @@ class HomePage extends StatelessWidget {
                     style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
                   ),
                   GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Get.toNamed("/workspace");
+                      },
                       child: const Row(
                         children: [
                           Text(
@@ -127,7 +129,8 @@ class HomePage extends StatelessWidget {
                           ),
                           Icon(Icons.arrow_forward_ios_outlined)
                         ],
-                      )),
+                      )
+                      ),
                 ],
               ),
               const SizedBox(

@@ -13,7 +13,7 @@ class WelcomePage extends StatelessWidget {
         children: [
           Align(
             alignment: AlignmentDirectional.center,
-            child: Image.asset('assets/welcome.jpg', fit: BoxFit.fill),
+            child: Image.asset('assets/welcome.png', fit: BoxFit.fill),
           ),
           const Positioned(
               bottom: 150,

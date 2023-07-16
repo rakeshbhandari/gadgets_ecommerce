@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-categoryMaker() {
+productTile() {
   return Container(
     margin: const EdgeInsets.only(right: 12),
     height: 182,
@@ -13,7 +13,6 @@ categoryMaker() {
     ),
 
     child: Column(
-      
       children: [
         Padding(
           padding: const EdgeInsets.only(
