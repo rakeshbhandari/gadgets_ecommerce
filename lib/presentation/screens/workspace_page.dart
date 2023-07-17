@@ -1,7 +1,9 @@
 import 'package:ecommerce_gadgets/presentation/widgets/browsing%20_history_tile.dart';
 import 'package:ecommerce_gadgets/presentation/widgets/chip_widgets.dart';
-import 'package:ecommerce_gadgets/presentation/widgets/ytproducts_tile.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../widgets/ytproducts_tile.dart';
 
 class WorkspacePage extends StatelessWidget {
   const WorkspacePage({Key? key}) : super(key: key);
@@ -199,7 +201,9 @@ class WorkspacePage extends StatelessWidget {
                     ]),
                   ),
                   GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Get.toNamed('youtuberspage');
+                      },
                       child: const Row(
                         children: [
                           Text(
@@ -215,17 +219,22 @@ class WorkspacePage extends StatelessWidget {
                 ],
               ),
               const SizedBox(
-                height: 20,
+                height: 40,
               ),
-              SizedBox(
-                  height: 180,
+              Container(
+                  height: 360,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey),
+                  ),
                   child: ListView.builder(
                     itemBuilder: (context, index) => productTile(),
                     itemCount: 4,
+                    
                     scrollDirection: Axis.horizontal,
                   )),
+
               const SizedBox(
-                height: 20,
+                height: 40,
               ),
 
               Container(

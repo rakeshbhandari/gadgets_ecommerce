@@ -22,7 +22,6 @@ class HomePage extends StatelessWidget {
         ],
       ),
       body: SingleChildScrollView(
-        
         child: Padding(
           padding: const EdgeInsets.only(left: 20, top: 40, right: 20),
           child: Column(
@@ -130,8 +129,7 @@ class HomePage extends StatelessWidget {
                           ),
                           Icon(Icons.arrow_forward_ios_outlined)
                         ],
-                      )
-                      ),
+                      )),
                 ],
               ),
               const SizedBox(
@@ -171,9 +169,9 @@ class HomePage extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 10,
+                // height: 10,
                 child: Container(
-                  height: 182,
+                  height: 80,
                   decoration: BoxDecoration(
                       border: Border.all(style: BorderStyle.solid)),
                   child: Row(
