@@ -1,3 +1,4 @@
+import 'package:ecommerce_gadgets/presentation/widgets/browsing%20_history_tile.dart';
 import 'package:ecommerce_gadgets/presentation/widgets/chip_widgets.dart';
 import 'package:ecommerce_gadgets/presentation/widgets/ytproducts_tile.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +10,10 @@ class WorkspacePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          backgroundColor: Colors.black,
+          child: const Icon(Icons.shopping_cart_outlined)),
       appBar: AppBar(
         title: const Text('Explore Workspaces',
             style: TextStyle(color: Colors.black)),
@@ -222,6 +227,7 @@ class WorkspacePage extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
+
               Container(
                 padding: const EdgeInsets.only(left: 15, top: 15, bottom: 15),
                 height: 240,
@@ -235,7 +241,7 @@ class WorkspacePage extends StatelessWidget {
                       const Text(
                         'PEOPLE SEARCH FOR',
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20),
+                            fontWeight: FontWeight.bold, fontSize: 19),
                       ),
                       const SizedBox(
                         height: 10,
@@ -304,7 +310,29 @@ class WorkspacePage extends StatelessWidget {
                         ],
                       ),
                     ]),
-              )
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              const Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  'BASED ON YOUR BROWSING HISTORY',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 19),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+
+              SizedBox(
+                  // height: 180,
+                  child: ListView.builder(
+                itemBuilder: (context, index) => browsingTile(),
+                itemCount: 3,
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+              )),
             ],
           ),
         ),

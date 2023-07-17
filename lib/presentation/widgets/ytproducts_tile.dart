@@ -4,9 +4,10 @@ productTile() {
   return Stack(
     children: <Widget>[
       Container(
-        margin: const EdgeInsets.only(right: 10),
+        margin: const EdgeInsets.only(right: 20),
+        padding: const EdgeInsets.only(left: 20),
         height: 180,
-        width: 190,
+        width: 170,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(4),
           color: Colors.grey[200],
@@ -32,9 +33,10 @@ productTile() {
       // ),
       Container(
         height: 100,
+        width: 120,
         alignment: AlignmentDirectional.center,
         decoration: const BoxDecoration(
-            image: DecorationImage(image: AssetImage('assets/headset.png'))),
+            image: DecorationImage(image: AssetImage('assets/youtube.png'))),
       ),
       Positioned(
         top: 10,
