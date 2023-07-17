@@ -11,7 +11,9 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       floatingActionButton: FloatingActionButton(
-          onPressed: () {Get.toNamed('cartpage');},
+          onPressed: () {
+            Get.toNamed('cartpage');
+          },
           backgroundColor: Colors.black,
           child: const Icon(Icons.shopping_cart_outlined)),
       appBar: AppBar(
@@ -70,7 +72,9 @@ class HomePage extends StatelessWidget {
                           Row(
                             children: [
                               ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Get.toNamed('productsdetailspage');
+                                },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: const Color(0xFFCED55B),
                                 ),
