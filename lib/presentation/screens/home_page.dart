@@ -1,3 +1,4 @@
+import 'package:ecommerce_gadgets/presentation/widgets/browsing%20_history_tile.dart';
 import 'package:ecommerce_gadgets/presentation/widgets/category_maker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,6 +10,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      floatingActionButton: FloatingActionButton(
+          onPressed: () {Get.toNamed('cartpage');},
+          backgroundColor: Colors.black,
+          child: const Icon(Icons.shopping_cart_outlined)),
       appBar: AppBar(
         elevation: 0,
         title: const Text(
@@ -169,36 +174,13 @@ class HomePage extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                // height: 10,
-                child: Container(
-                  height: 80,
-                  decoration: BoxDecoration(
-                      border: Border.all(style: BorderStyle.solid)),
-                  child: Row(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            image: const DecorationImage(
-                                image: AssetImage('assets/car.png')),
-                            color: const Color(0xffDDDDDB)),
-                      ),
-                      const Column(
-                        children: [
-                          Text(
-                            'Bat Automobile 2023 edition',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Text('Alfred Inventory'),
-                          Text('\$3500'),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-              )
+                  // height: 180,
+                  child: ListView.builder(
+                itemBuilder: (context, index) => browsingTile(),
+                itemCount: 3,
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+              )),
             ],
           ),
         ),

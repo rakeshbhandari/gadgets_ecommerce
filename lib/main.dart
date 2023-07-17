@@ -1,3 +1,4 @@
+import 'package:ecommerce_gadgets/presentation/screens/cart_page.dart';
 import 'package:ecommerce_gadgets/presentation/screens/workspace_page.dart';
 import 'package:ecommerce_gadgets/presentation/screens/youtubers_page.dart';
 import 'package:flutter/material.dart';
@@ -28,6 +29,7 @@ class MainApp extends StatelessWidget {
         GetPage(name: '/homepage', page: () => const HomePage()),
         GetPage(name: '/workspace', page: () => const WorkspacePage()),
         GetPage(name: '/youtuberspage', page: () => const YoutubersPage()),
+        GetPage(name: '/cartpage', page: () => const CartPage()),
       ],
       home: const WelcomePage(),
     );

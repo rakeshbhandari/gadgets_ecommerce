@@ -3,8 +3,6 @@ import 'package:ecommerce_gadgets/presentation/widgets/chip_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../widgets/ytproducts_tile.dart';
-
 class WorkspacePage extends StatelessWidget {
   const WorkspacePage({Key? key}) : super(key: key);
 
@@ -13,7 +11,9 @@ class WorkspacePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Get.toNamed('cartpage');
+          },
           backgroundColor: Colors.black,
           child: const Icon(Icons.shopping_cart_outlined)),
       appBar: AppBar(
@@ -33,21 +33,18 @@ class WorkspacePage extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              // Container(
-              //   decoration: BoxDecoration(borderRadius: BorderRadius.circular(4)),
-              //   height: 100,
-              //   margin: const EdgeInsets.all(2.0),
-              //   child: const Row(
-              //     children: [
-              //       TextField(
-              //           decoration: InputDecoration(
-              //         border: OutlineInputBorder(),
-              //         hintText: 'What are you looking for? ',
-              //       )),
-              //       Icon(Icons.filter_hdr_sharp)
-              //     ],
-              //   ),
-              // ),
+              Container(
+                padding: const EdgeInsets.all(8.0),
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(6)),
+                height: 100,
+                margin: const EdgeInsets.all(2.0),
+                child: const TextField(
+                    decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: 'What are you looking for? ',
+                )),
+              ),
 
               SizedBox(
                 // height: 310,
@@ -221,17 +218,17 @@ class WorkspacePage extends StatelessWidget {
               const SizedBox(
                 height: 40,
               ),
-              Container(
-                  height: 360,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.grey),
-                  ),
-                  child: ListView.builder(
-                    itemBuilder: (context, index) => productTile(),
-                    itemCount: 4,
-                    
-                    scrollDirection: Axis.horizontal,
-                  )),
+              // Container(
+              //     height: 360,
+              //     decoration: BoxDecoration(
+              //       border: Border.all(color: Colors.grey),
+              //     ),
+              //     child: ListView.builder(
+              //       itemBuilder: (context, index) => productTile(),
+              //       itemCount: 4,
+
+              //       scrollDirection: Axis.horizontal,
+              //     )),
 
               const SizedBox(
                 height: 40,

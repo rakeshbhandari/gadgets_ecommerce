@@ -40,7 +40,7 @@ browsingTile() {
             ),
           ),
           const SizedBox(
-            width: 80,
+            width: 40,
           ),
           const Column(
             children: [
@@ -54,7 +54,11 @@ browsingTile() {
               SizedBox(height: 10),
               Text('4.5 (23 Reviews)'),
               SizedBox(height: 10),
-              Text('\$200'),
+              Text(
+                '\$200',
+                style:
+                    TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+              ),
             ],
           )
         ],
