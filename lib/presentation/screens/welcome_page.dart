@@ -13,7 +13,7 @@ class WelcomePage extends StatelessWidget {
         children: [
           Align(
             alignment: AlignmentDirectional.center,
-            child: Image.asset('assets/welcome.png', fit: BoxFit.fill),
+            child: Image.asset('assets/welcome.png', fit: BoxFit.cover),
           ),
           const Positioned(
               bottom: 150,
@@ -23,7 +23,7 @@ class WelcomePage extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
-                  fontSize: 42,
+                  fontSize: 36,
                 ),
               )),
           const SizedBox(

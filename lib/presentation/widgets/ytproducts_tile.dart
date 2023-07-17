@@ -1,49 +1,80 @@
 import 'package:flutter/material.dart';
 
 productTile() {
-  return Container(
-    margin: const EdgeInsets.only(right: 12),
-    height: 182,
-    width: 160,
-
-    // padding: const EdgeInsets.symmetric(horizontal: 5),
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(16),
-      color: const Color(0xFFD1D2CD),
-    ),
-
-    child: Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(
-            top: 4,
+  return Stack(
+    children: <Widget>[
+      Container(
+        margin: const EdgeInsets.only(right: 10),
+        height: 180,
+        width: 190,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(4),
+          color: Colors.grey[200],
+          // image: const DecorationImage(
+          //   image: AssetImage('assets/youtube.png'),
+          //   fit: BoxFit.fill,
+          // )
+        ),
+      ),
+      // Positioned(
+      //   // top: 2,
+      //   // left: 6,
+      //   // bottom: 2,
+      //   // right: 0,
+      //   child: Align(
+      //     alignment: Alignment.topCenter,
+      //     child: Image.asset(
+      //       'assets/headset.png',
+      //       fit: BoxFit.fill,
+      //       height: 100,
+      //     ),
+      //   ),
+      // ),
+      Container(
+        height: 100,
+        alignment: AlignmentDirectional.center,
+        decoration: const BoxDecoration(
+            image: DecorationImage(image: AssetImage('assets/headset.png'))),
+      ),
+      Positioned(
+        top: 10,
+        right: 10,
+        child: IconButton(
+          onPressed: () {},
+          icon: const Icon(Icons.favorite),
+          color: Colors.green,
+        ),
+      ),
+      Positioned(
+        bottom: 10,
+        left: 10,
+        right: 10,
+        child: Container(
+          height: 80,
+          width: 100,
+          padding: const EdgeInsets.only(left: 4, right: 10, bottom: 4),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(5),
+            color: Colors.white,
           ),
-          child: Container(
-            height: 120,
-            width: 150,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                image: const DecorationImage(
-                    image: AssetImage('assets/gaming.jpg'), fit: BoxFit.fill)),
+          child: const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'USB microphone',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                SizedBox(height: 5),
+                Text('\$200'),
+                SizedBox(height: 5),
+                Text('4.5 (200 Reviews)'),
+              ],
+            ),
           ),
         ),
-        const SizedBox(
-          height: 10,
-        ),
-        const Text(
-          'Gaming',
-          maxLines: 1,
-          overflow: TextOverflow.ellipsis,
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
-        ),
-        const SizedBox(
-          height: 10,
-        ),
-        Text(
-          '59 items',
-          style: TextStyle(color: Colors.grey[700]),
-        )
-      ],
-    ),
+      )
+    ],
   );
 }
