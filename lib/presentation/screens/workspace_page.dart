@@ -220,19 +220,20 @@ class WorkspacePage extends StatelessWidget {
                   height: 20,
                 ),
 
-                SizedBox(
-                  height: 400,
-                  child: Expanded(
-                    child: ListView.builder(
-                      itemBuilder: (context, index) => Container(
-                          height: 100,
-                          decoration: const BoxDecoration(color: Colors.red)),
-                      itemCount: 3,
-                      shrinkWrap: true,
-                      scrollDirection: Axis.horizontal,
-                    ),
-                  ),
-                ),
+                // SizedBox(
+                //   height: 400,
+                //   child: ListView.builder(
+                //     itemBuilder: (context, index) => Container(
+                //         height: 100,
+                //         width: 200,
+                //         decoration: BoxDecoration(
+                //             color: Colors.red,
+                //             border: Border.all(color: Colors.black))),
+                //     itemCount: 3,
+                //     shrinkWrap: true,
+                //     scrollDirection: Axis.horizontal,
+                //   ),
+                // ),
                 // Flexible(
                 //   fit: FlexFit.tight,
                 //   child: SizedBox(
