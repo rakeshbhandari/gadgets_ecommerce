@@ -7,6 +7,7 @@ productTile() {
       padding: const EdgeInsets.all(4),
       // height: 220,
       // width: 150,
+      // 
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(4),
         color: Colors.grey[200],
