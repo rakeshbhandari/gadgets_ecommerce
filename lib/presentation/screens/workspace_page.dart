@@ -3,6 +3,8 @@ import 'package:ecommerce_gadgets/presentation/widgets/chip_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../widgets/ytproducts_tile.dart';
+
 class WorkspacePage extends StatelessWidget {
   const WorkspacePage({Key? key}) : super(key: key);
 
@@ -234,18 +236,14 @@ class WorkspacePage extends StatelessWidget {
                 //     scrollDirection: Axis.horizontal,
                 //   ),
                 // ),
-                // Flexible(
-                //   fit: FlexFit.tight,
-                //   child: SizedBox(
-                //     height: 700,
-                //     child: ListView.builder(
-                //       itemBuilder: (context, index) => productTile(),
-                //       itemCount: 3,
-                //       shrinkWrap: true,
-                //       scrollDirection: Axis.horizontal,
-                //     ),
-                //   ),
-                // ),
+                SizedBox(
+                  height: 220,
+                  child: ListView.builder(
+                    itemBuilder: (context, index) => productTile(),
+                    itemCount: 3,
+                    scrollDirection: Axis.horizontal,
+                  ),
+                ),
                 const SizedBox(
                   height: 20,
                 ),

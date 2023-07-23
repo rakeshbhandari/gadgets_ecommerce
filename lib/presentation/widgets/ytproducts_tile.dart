@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 productTile() {
-  return Flexible(
-    child: Container(
+  return Container(
+      width: 200,
       margin: const EdgeInsets.only(right: 10, bottom: 10),
       padding: const EdgeInsets.all(4),
       // height: 220,
       // width: 150,
-      // 
+      //
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(4),
         color: Colors.grey[200],
@@ -19,7 +19,7 @@ productTile() {
             left: 5,
             right: 5,
             child: Container(
-              height: 160,
+              height: 100,
               width: 120,
               alignment: AlignmentDirectional.center,
               decoration: const BoxDecoration(
@@ -71,7 +71,5 @@ productTile() {
             ),
           )
         ],
-      ),
-    ),
-  );
+      ));
 }
